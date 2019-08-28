@@ -9,10 +9,8 @@ password = 'My password'
 message_title = 'My message title'
 
 def get_contacts(filename):
-    """
-    Return email addresses read from a file specified by filename.
-    """
 
+    # Return email addresses read from a file specified by filename.
     emails = []
     with open(filename, newline='') as contacts_file:
         emailreader = csv.reader(contacts_file, delimiter=' ', quotechar='|')
@@ -24,8 +22,9 @@ def get_contacts(filename):
 
 
 def main():
-	# Read contacts from a CSV file named 'mycontacts.csv'
-    formatted_emails = get_contacts('mycontacts.csv')
+	
+    # Read contacts from a CSV file named 'all_emails.csv'
+    formatted_emails = get_contacts('all_emails.csv')
     message ="""
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porta diam in nulla fringilla, vitae sollicitudin
